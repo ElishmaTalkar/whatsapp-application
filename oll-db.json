@@ -1,0 +1,186 @@
+{
+  "businesses": [
+    {
+      "id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "created_at": "2026-03-24T14:29:18.532Z",
+      "name": "nomad",
+      "use_case": "customer queries",
+      "prompt_instruction": "Business Description: handles customer queries and leads for travelers. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain services for nomad."
+    },
+    {
+      "id": "0f4039ab-ae71-4bfc-bab3-28ce51fb7b90",
+      "created_at": "2026-03-24T14:31:40.457Z",
+      "name": "coffee shop",
+      "use_case": "runs a cafe",
+      "prompt_instruction": "Business Description: A premium local cafe serving specialty beans and artisanal pastries. Role: You are our expert Virtual Barista. Goal: Help customers with the menu, provide pricing for lattes and cappuccinos, Share our location, and take table inquiries for coffee shop."
+    },
+    {
+      "id": "a0b38b2d-ca5e-4e85-a1c0-26226deaeb5c",
+      "created_at": "2026-03-24T14:59:06.474Z",
+      "name": "coffee shop",
+      "use_case": "Business Description: coffe shop. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain products for coffee shop.",
+      "prompt_instruction": "You are a helpful assistant for coffee shop. Your goal is to: Business Description: coffe shop. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain products for coffee shop.."
+    },
+    {
+      "id": "31a7162b-0972-4559-8f9c-81bda772e60c",
+      "created_at": "2026-03-24T17:20:32.039Z",
+      "name": "blue tokai roasters",
+      "use_case": "Business Description: I own a coffee shop named blue tokai. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain products for blue tokai roasters.",
+      "prompt_instruction": "You are a helpful assistant for blue tokai roasters. Your goal is to: Business Description: I own a coffee shop named blue tokai. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain products for blue tokai roasters.."
+    },
+    {
+      "id": "5518e0da-3f00-4a2a-87c5-31b7e18df043",
+      "created_at": "2026-03-24T18:10:16.980Z",
+      "name": "DKr",
+      "use_case": "Business Description: film city. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain products for DKr.",
+      "prompt_instruction": "You are a helpful assistant for DKr. Your goal is to: Business Description: film city. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain products for DKr.."
+    },
+    {
+      "id": "1234",
+      "created_at": "2026-03-25T06:39:13.085Z",
+      "name": " elishma coffee roasters",
+      "use_case": "Business Description: coffee orders etc. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain products for  elishma coffee roasters.",
+      "prompt_instruction": "You are a helpful assistant for  elishma coffee roasters. Your goal is to: Business Description: coffee orders etc. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain products for  elishma coffee roasters.."
+    }
+  ],
+  "meta_connections": [
+    {
+      "id": "58e273f5-7634-455b-b99b-3286b208947f",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "platform": "whatsapp",
+      "access_token": "dummy_access_token_abc_123",
+      "phone_number_id": "123456789",
+      "waba_id": "987654321",
+      "page_id": null
+    },
+    {
+      "id": "19b45e99-0418-490f-9034-75466c14cc7d",
+      "business_id": "0f4039ab-ae71-4bfc-bab3-28ce51fb7b90",
+      "platform": "whatsapp",
+      "access_token": "dummy_access_token_abc_123",
+      "phone_number_id": "123456789",
+      "waba_id": "987654321",
+      "page_id": null
+    },
+    {
+      "id": "c7783357-83a0-4180-bdf9-080e3deaaeaf",
+      "business_id": "31a7162b-0972-4559-8f9c-81bda772e60c",
+      "platform": "whatsapp",
+      "access_token": "dummy_access_token_abc_123",
+      "phone_number_id": "123456789",
+      "waba_id": "987654321",
+      "page_id": null
+    },
+    {
+      "id": "8d162b8e-758c-4f24-ad3b-2b5ddafa46bd",
+      "business_id": "5518e0da-3f00-4a2a-87c5-31b7e18df043",
+      "platform": "whatsapp",
+      "access_token": "dummy_access_token_abc_123",
+      "phone_number_id": "123456789",
+      "waba_id": "987654321",
+      "page_id": null
+    }
+  ],
+  "messages": [
+    {
+      "id": "365ce5e7-46eb-4ea1-8ed0-5980236fd547",
+      "timestamp": "2026-03-24T14:56:52.365Z",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"hi\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "I received your message about \"hi\". As an AI for nomad, I'm here to help you based on our use case: Business Description: handles customer queries and leads for travelers. Role: You are their expert AI DM assistant. Goal: Handle inquiries, set appointments, and explain services for nomad.",
+      "status": "dispatched"
+    },
+    {
+      "id": "82136eda-b841-43b0-8831-f3b1ba067314",
+      "timestamp": "2026-03-24T14:58:44.151Z",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"hi\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "Hello there! I'm the AI assistant for nomad. How's your day going?",
+      "status": "dispatched"
+    },
+    {
+      "id": "11037e37-79eb-4700-b0fc-ee1b9dc19edb",
+      "timestamp": "2026-03-24T14:59:14.136Z",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"hi\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "Hello there! I'm the AI assistant for nomad. How's your day going?",
+      "status": "dispatched"
+    },
+    {
+      "id": "cfb635d5-ae51-4808-9f54-5cbbc03e79fa",
+      "timestamp": "2026-03-24T14:59:20.707Z",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"its going well\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "Thanks for reaching out! Regarding \"its going well\", I'm your dedicated assistant for nomad. How can I best help you with our services today?",
+      "status": "dispatched"
+    },
+    {
+      "id": "b6ae6270-1404-4f07-889b-54e287ce0c56",
+      "timestamp": "2026-03-24T14:59:35.802Z",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"I have a complain regarding my coffee\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "Thanks for reaching out! Regarding \"I have a complain regarding my coffee\", I'm your dedicated assistant for nomad. How can I best help you with our services today?",
+      "status": "dispatched"
+    },
+    {
+      "id": "a601ffb6-8576-4102-ba7e-d4ff05d4ffad",
+      "timestamp": "2026-03-24T16:24:12.542Z",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"hello\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "Hello! Welcome to Nomad. How may I assist you today? Are you looking for travel inspiration, planning assistance, or information about our services?",
+      "status": "dispatched"
+    },
+    {
+      "id": "d994fbe2-7011-48ed-8027-292d604a5829",
+      "timestamp": "2026-03-24T16:24:19.587Z",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"hello\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "Hello! Welcome to Nomad. How can I assist you today? Are you a traveler looking for tips, a travel enthusiast seeking inspiration, or perhaps looking for guidance on our services?",
+      "status": "dispatched"
+    },
+    {
+      "id": "1a11125c-5029-45c9-aceb-40d8c4001521",
+      "timestamp": "2026-03-24T17:20:37.581Z",
+      "business_id": "4aa7e425-1950-41cc-8400-ac8e9c2282cd",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"hi\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "Hi! Welcome to Nomad. I'm here to help you plan your next adventure. What brings you to our platform today? Are you looking for travel recommendations, or perhaps need assistance with a booking or inquiry?",
+      "status": "dispatched"
+    },
+    {
+      "id": "2d3c0cfe-0cbd-416a-87ec-6a3747b08b6d",
+      "timestamp": "2026-03-24T17:23:04.624Z",
+      "business_id": "0f4039ab-ae71-4bfc-bab3-28ce51fb7b90",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"hi\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "Welcome to our coffee shop. What can I get started for you today?",
+      "status": "dispatched"
+    },
+    {
+      "id": "b6a3abe3-e4bf-41e5-a0ab-ce40fe373793",
+      "timestamp": "2026-03-24T17:23:17.208Z",
+      "business_id": "0f4039ab-ae71-4bfc-bab3-28ce51fb7b90",
+      "customer_id": "user_123",
+      "platform": "whatsapp",
+      "incoming_payload": "{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"from\":\"user_123\",\"text\":{\"body\":\"I actually wanted to place an order\"}}],\"metadata\":{\"phone_number_id\":\"123456789\"}}}]}]}",
+      "ai_response": "What can I get started for you today? We have a variety of specialty lattes and cappuccinos made with high-quality espresso and fresh milk. \n\nOur menu includes:\n\n- Caramel Latte: Espresso, caramel syrup, steamed milk, and a caramel drizzle ($5.50)\n- Mocha Cappuccino: Espresso, chocolate syrup, steamed milk, and foam ($5.75)\n- Cinnamon Dolce Latte: Espresso, steamed milk, and a sprinkle of cinnamon ($5.25)\n\nWe also offer pour-overs, cold brew, and a selection of teas and artisanal pastries.\n\nWould you like to customize or place an order from our menu?",
+      "status": "dispatched"
+    }
+  ]
+}

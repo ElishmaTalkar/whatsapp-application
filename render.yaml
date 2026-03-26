@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: oll-ai-app
+    runtime: node
+    plan: starter # Persistence requires 'starter' plan or higher
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATABASE_PATH
+        value: /var/data/database.sqlite
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: NEXTAUTH_URL
+        sync: false # User needs to set this after deployment
+    disk:
+      name: oll-sqlite-data
+      mountPath: /var/data
+      sizeGB: 1
