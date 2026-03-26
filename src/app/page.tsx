@@ -26,7 +26,8 @@ export default function Home() {
   // Parallax and Zoom transforms
   const bgScale = useTransform(scrollY, [0, 1000], [1, 1.5]);
   const shadeOpacity = useTransform(scrollY, [0, 500], [0, 0.8]);
-  const textY = useTransform(scrollY, [0, 500], [0, -100]);
+  const textScale = useTransform(scrollY, [0, 500], [1, 1.15]);
+  const textY = useTransform(scrollY, [0, 500], [0, -40]);
   const arrowOpacity = useTransform(scrollY, [0, 100], [1, 0]);
 
   return (
@@ -71,7 +72,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen pt-40 pb-20 px-6 flex flex-col items-center justify-center overflow-hidden z-10">
         <motion.div
-          style={{ y: textY }}
+          style={{ y: textY, scale: textScale }}
           className="relative z-10 max-w-5xl mx-auto text-center space-y-10"
         >
           <FadeIn>
