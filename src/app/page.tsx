@@ -53,19 +53,19 @@ export default function Home() {
           <FadeIn>
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-2 font-mono text-[11px] tracking-[0.04em] text-[#f2f4ff]/40">
               <div className="w-1.5 h-1.5 rounded-full bg-white animate-blink shadow-[0_0_6px_#fff]" />
-              AI-POWERED MESSAGING ASSISTANT
+              INSTANT. INTELLIGENT. INVISIBLE.
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] max-w-4xl mx-auto">
-              Conversations that <span className="text-glow">close deals</span> while you sleep
+            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] max-w-4xl mx-auto uppercase">
+              Your brand&apos;s intelligence, <span className="text-glow">on autopilot.</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <p className="text-lg md:text-xl text-[#f2f4ff]/50 font-medium max-w-xl mx-auto leading-relaxed">
-              Automate WhatsApp & Instagram with intelligent AI agents. Capture leads, reply instantly, and scale — powered by Gemini 1.5 and Llama 3.
+              Automate high-intent conversations on WhatsApp and Instagram. Deploy AI agents that reason, capture leads, and close deals — all in milliseconds.
             </p>
           </FadeIn>
 
