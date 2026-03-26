@@ -236,9 +236,6 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="relative z-10 border-t border-white/5 py-12 px-10 flex flex-col md:flex-row justify-center items-center gap-8">
 
-        <div className="font-mono text-[10px] text-[#f2f4ff]/40 uppercase tracking-widest">
-          © 2026 · Built on Gemini, Groq & Supabase
-        </div>
       </footer>
     </main>
   );
