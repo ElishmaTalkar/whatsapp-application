@@ -36,12 +36,8 @@ export default function Home() {
         style={{ scale: bgScale }}
         className="fixed inset-0 z-0 pointer-events-none"
       >
-        <div
-          className="absolute inset-0 bg-no-repeat bg-cover bg-center"
-          style={{ backgroundImage: "url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungleBG.jpg')" }}
-        />
-        <div className="absolute inset-0 bg-[#080c10]/60 backdrop-blur-[2px]" />
-        <div className="grid-overlay opacity-30" />
+        <div className="absolute inset-0 bg-[#080c10]" />
+        <div className="grid-overlay opacity-40" />
         <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_50%_0%,rgba(56,217,245,0.18)_0%,rgba(91,106,245,0.12)_35%,transparent_70%)]" />
       </motion.div>
 
