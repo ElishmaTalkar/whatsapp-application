@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { FadeIn, MotionButton } from '@/components/ui';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -20,9 +21,30 @@ export default function Home() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  const { scrollY } = useScroll();
+
+  // Parallax and Zoom transforms
+  const bgScale = useTransform(scrollY, [0, 1000], [1, 1.5]);
+  const shadeOpacity = useTransform(scrollY, [0, 500], [0, 0.8]);
+  const textY = useTransform(scrollY, [0, 500], [0, -100]);
+  const arrowOpacity = useTransform(scrollY, [0, 100], [1, 0]);
+
   return (
     <main ref={containerRef} className="min-h-screen bg-[#080c10] text-[#f2f4ff] selection:bg-[#5b6af5]/30 relative">
-      <div className="grid-overlay" />
+      {/* Background Parallax Layer */}
+      <motion.div
+        style={{ scale: bgScale }}
+        className="fixed inset-0 z-0 pointer-events-none"
+      >
+        <div className="grid-overlay" />
+        <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_50%_0%,rgba(56,217,245,0.18)_0%,rgba(91,106,245,0.12)_35%,transparent_70%)]" />
+      </motion.div>
+
+      {/* Shade Overlay */}
+      <motion.div
+        style={{ opacity: shadeOpacity }}
+        className="hero-shade"
+      />
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-[100] nav-blur px-10 py-4 flex items-center justify-between">
@@ -47,9 +69,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen pt-40 pb-20 px-6 flex flex-col items-center justify-center overflow-hidden z-10">
-        <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_50%_0%,rgba(56,217,245,0.18)_0%,rgba(91,106,245,0.12)_35%,transparent_70%)] pointer-events-none" />
-
-        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-10">
+        <motion.div
+          style={{ y: textY }}
+          className="relative z-10 max-w-5xl mx-auto text-center space-y-10"
+        >
           <FadeIn>
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-2 font-mono text-[11px] tracking-[0.04em] text-[#f2f4ff]/40">
               <div className="w-1.5 h-1.5 rounded-full bg-[#38d9f5] animate-blink shadow-[0_0_6px_#38d9f5]" />
@@ -76,7 +99,15 @@ export default function Home() {
               </Link>
             </div>
           </FadeIn>
-        </div>
+        </motion.div>
+
+        {/* Bouncy Arrow Scroll Indicator */}
+        <motion.div
+          style={{ opacity: arrowOpacity }}
+          className="arrow bouncy z-20 pointer-events-none"
+        >
+          <ChevronDown className="text-white/50 w-8 h-8" />
+        </motion.div>
       </section>
 
 

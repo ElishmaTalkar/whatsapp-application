@@ -127,3 +127,48 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Bouncy Arrow Animation */
+@keyframes Weeeeeeeeeee {
+  0% {
+    transform: translate(0, 0px);
+    animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+  }
+
+  11% {
+    transform: translate(0, -25px) scaleX(.8);
+    animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+  }
+
+  20% {
+    transform: translate(0, 0px) scaleY(.8);
+    animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+  }
+
+  28% {
+    transform: translate(0, -10px);
+    animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+  }
+
+  36% {
+    transform: translate(0, 0px);
+    animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+  }
+
+  100% {
+    transform: translate(0, 0px);
+    animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+  }
+}
+
+.bouncy {
+  animation: Weeeeeeeeeee 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background: black;
+  pointer-events: none;
+  z-index: 5;
+}
