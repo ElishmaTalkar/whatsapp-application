@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { FadeIn } from '@/components/ui';
+import { FadeIn, MotionButton } from '@/components/ui';
 import { motion } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 
@@ -72,10 +72,7 @@ export default function Home() {
           <FadeIn delay={0.3} className="pt-4">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
               <Link href="/dashboard">
-                <button className="btn-main bg-[#5b6af5] text-white px-10 py-4 rounded-full font-bold text-lg flex items-center gap-3 shadow-[0_0_40px_rgba(91,106,245,0.35)] hover:translate-y-[-2px] hover:shadow-[0_0_60px_rgba(91,106,245,0.45)] transition-all">
-                  Get Started For Free
-                  <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-sm">→</span>
-                </button>
+                <MotionButton label="Get Started For Free" />
               </Link>
             </div>
           </FadeIn>
@@ -224,10 +221,7 @@ export default function Home() {
           </p>
           <div className="relative pt-4">
             <Link href="/dashboard">
-              <button className="btn-main bg-[#5b6af5] text-white px-12 py-5 rounded-full font-bold text-xl flex items-center gap-3 mx-auto shadow-[0_0_40px_rgba(91,106,245,0.3)] hover:scale-105 transition-all">
-                Request Early Access
-                <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm">→</span>
-              </button>
+              <MotionButton label="Request Early Access" classes="mx-auto" />
             </Link>
           </div>
         </div>

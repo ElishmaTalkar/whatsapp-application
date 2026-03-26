@@ -1,6 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { motion, HTMLMotionProps } from "framer-motion"
+import MotionButton from "./MotionButton"
 
 const Card = React.forwardRef<
     HTMLDivElement,
@@ -187,5 +188,6 @@ export {
     Textarea,
     Button,
     FadeIn,
+    MotionButton,
     cn
 }
