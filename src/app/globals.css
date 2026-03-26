@@ -4,8 +4,8 @@
   --color-background-deep: #080c10;
   --color-background-card: rgba(255, 255, 255, 0.03);
   --color-border-subtle: rgba(255, 255, 255, 0.07);
-  --color-accent-primary: #5b6af5;
-  --color-accent-secondary: #38d9f5;
+  --color-accent-primary: #ffffff;
+  --color-accent-secondary: #ffffff;
 
   --font-sans: 'Inter', var(--font-inter), system-ui, sans-serif;
   --font-heading: 'Bricolage Grotesque', var(--font-bricolage), sans-serif;
@@ -18,11 +18,11 @@
   --card: rgba(255, 255, 255, 0.03);
   --card-foreground: #f2f4ff;
   --border: rgba(255, 255, 255, 0.07);
-  --ring: #5b6af5;
+  --ring: #ffffff;
 
-  --accent: #5b6af5;
-  --accent-glow: rgba(91, 106, 245, 0.35);
-  --accent2: #38d9f5;
+  --accent: #ffffff;
+  --accent-glow: rgba(255, 255, 255, 0.15);
+  --accent2: #ffffff;
   --muted: rgba(242, 244, 255, 0.45);
 }
 
@@ -122,7 +122,7 @@ h3 {
 
 /* Text Glow Effect */
 .text-glow {
-  background: linear-gradient(90deg, #ffffff 0%, var(--accent2) 60%, var(--accent) 100%);
+  background: linear-gradient(90deg, #ffffff 0%, #cccccc 60%, #999999 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

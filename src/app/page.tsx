@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-[#080c10] text-[#f2f4ff] selection:bg-[#5b6af5]/30 relative">
+    <main ref={containerRef} className="min-h-screen bg-[#080c10] text-[#f2f4ff] selection:bg-white/30 relative">
       <div className="grid-overlay" />
 
       {/* Navigation */}
@@ -47,12 +47,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen pt-40 pb-20 px-6 flex flex-col items-center justify-center overflow-hidden z-10">
-        <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_50%_0%,rgba(56,217,245,0.18)_0%,rgba(91,106,245,0.12)_35%,transparent_70%)] pointer-events-none" />
+        <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.08)_35%,transparent_70%)] pointer-events-none" />
 
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-10">
           <FadeIn>
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-2 font-mono text-[11px] tracking-[0.04em] text-[#f2f4ff]/40">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#38d9f5] animate-blink shadow-[0_0_6px_#38d9f5]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-white animate-blink shadow-[0_0_6px_#fff]" />
               AI-POWERED MESSAGING ASSISTANT
             </div>
           </FadeIn>
@@ -103,7 +103,7 @@ export default function Home() {
       {/* FEATURES */}
       <section id="features" className="relative z-10 py-24 px-6 max-w-7xl mx-auto">
         <div className="space-y-4 mb-16">
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#38d9f5]">Capabilities</p>
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white">Capabilities</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight max-w-md leading-[1.1]">
             Everything your AI agent needs to perform
           </h2>
@@ -142,9 +142,9 @@ export default function Home() {
               desc: 'Define identity, link channels, go live. A guided wizard — zero developer required to deploy your first agent.'
             }
           ].map((feat, i) => (
-            <div key={i} className="bg-[#080c10] p-10 space-y-5 group relative hover:bg-[#5b6af5]/[0.05] transition-colors">
-              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#5b6af5] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="w-11 h-11 rounded-xl bg-[#5b6af5]/10 border border-[#5b6af5]/25 flex items-center justify-center text-xl">
+            <div key={i} className="bg-[#080c10] p-10 space-y-5 group relative hover:bg-white/[0.05] transition-colors">
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-11 h-11 rounded-xl bg-white/10 border border-white/25 flex items-center justify-center text-xl">
                 {feat.icon}
               </div>
               <div className="space-y-2">
@@ -160,11 +160,11 @@ export default function Home() {
 
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" className="relative z-10 py-24 px-6 border-t border-white/5 bg-gradient-to-b from-transparent via-[#5b6af5]/[0.02] to-transparent">
+      <section id="how-it-works" className="relative z-10 py-24 px-6 border-t border-white/5 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           <div className="space-y-12 w-full max-w-2xl text-center">
             <div className="space-y-4">
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#38d9f5]">How It Works</p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white">How It Works</p>
               <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mx-auto">
                 From message received to reply sent — in under a second
               </h2>
@@ -194,7 +194,7 @@ export default function Home() {
                 }
               ].map((step, i) => (
                 <div key={i} className="flex gap-6 py-8 border-b border-white/5 last:border-0 grow">
-                  <span className="font-mono text-[10px] text-[#5b6af5] pt-1">{step.step}</span>
+                  <span className="font-mono text-[10px] text-white/60 pt-1">{step.step}</span>
                   <div className="space-y-1">
                     <h4 className="text-base font-bold tracking-tight">{step.title}</h4>
                     <p className="font-mono text-[11px] text-[#f2f4ff]/40 leading-relaxed max-w-sm">
@@ -210,11 +210,11 @@ export default function Home() {
 
       {/* CTA SECTION */}
       <section className="py-24 px-6 relative z-10">
-        <div className="max-w-5xl mx-auto glass border-[#5b6af5]/20 bg-[#5b6af5]/5 p-20 rounded-[3rem] text-center space-y-8 overflow-hidden relative group">
-          <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse,rgba(91,106,245,0.2)_0%,transparent_70%)] pointer-events-none" />
+        <div className="max-w-5xl mx-auto glass border-white/20 bg-white/5 p-20 rounded-[3rem] text-center space-y-8 overflow-hidden relative group">
+          <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse,rgba(255,255,255,0.15)_0%,transparent_70%)] pointer-events-none" />
 
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-tight relative">
-            Put your inbox on <br /><span className="text-[#a0aaff]">autopilot.</span> Today.
+            Put your inbox on <br /><span className="text-white">autopilot.</span> Today.
           </h2>
           <p className="font-mono text-sm text-[#f2f4ff]/40 max-w-md mx-auto relative">
             Set up in minutes. No code needed. Cancel anytime.
