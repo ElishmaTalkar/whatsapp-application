@@ -24,10 +24,9 @@ export default function Home() {
   const { scrollY } = useScroll();
 
   // Parallax and Zoom transforms
-  const bgScale = useTransform(scrollY, [0, 1000], [1, 1.5]);
+  const bgScale = useTransform(scrollY, [0, 1000], [1, 1.4]);
   const shadeOpacity = useTransform(scrollY, [0, 500], [0, 0.8]);
-  const textScale = useTransform(scrollY, [0, 500], [1, 1.15]);
-  const textY = useTransform(scrollY, [0, 500], [0, -40]);
+  const textY = useTransform(scrollY, [0, 500], [0, -80]);
   const arrowOpacity = useTransform(scrollY, [0, 100], [1, 0]);
 
   return (
@@ -63,7 +62,7 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Link href="/login" className="text-[13px] font-bold text-[#f2f4ff]/40 hover:text-white transition-colors uppercase tracking-widest">
+          <Link href="/login" className="text-[13px] font-bold text-white hover:text-[#5b6af5] transition-colors uppercase tracking-widest">
             Sign In
           </Link>
         </div>
@@ -72,7 +71,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen pt-40 pb-20 px-6 flex flex-col items-center justify-center overflow-hidden z-10">
         <motion.div
-          style={{ y: textY, scale: textScale }}
+          style={{ y: textY }}
           className="relative z-10 max-w-5xl mx-auto text-center space-y-10"
         >
           <FadeIn>
@@ -114,7 +113,13 @@ export default function Home() {
 
 
       {/* LOGOS BAR */}
-      <div className="relative z-10 border-t border-white/5 py-10 px-6 flex flex-wrap justify-center gap-14 group">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="relative z-10 border-t border-white/5 py-10 px-6 flex flex-wrap justify-center gap-14 group"
+      >
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#080c10] px-4 font-mono text-[10px] uppercase tracking-[0.12em] text-[#f2f4ff]/30">
           Trusted integrations
         </div>
@@ -131,10 +136,17 @@ export default function Home() {
             {logo.name} <span className="font-normal opacity-60 lowercase">{logo.sub}</span>
           </span>
         ))}
-      </div>
+      </motion.div>
 
       {/* FEATURES */}
-      <section id="features" className="relative z-10 py-24 px-6 max-w-7xl mx-auto">
+      <motion.section
+        id="features"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative z-10 py-24 px-6 max-w-7xl mx-auto"
+      >
         <div className="space-y-4 mb-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#38d9f5]">Capabilities</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight max-w-md leading-[1.1]">
@@ -189,11 +201,18 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" className="relative z-10 py-24 px-6 border-t border-white/5 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
+      <motion.section
+        id="how-it-works"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.8 }}
+        className="py-24 px-6 relative z-10 overflow-hidden border-t border-white/5 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent"
+      >
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           <div className="space-y-12 w-full max-w-2xl text-center">
             <div className="space-y-4">
@@ -239,10 +258,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA SECTION */}
-      <section className="py-24 px-6 relative z-10">
+      <motion.section
+        initial={{ opacity: 0, scale: 0.98, y: 20 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 0.8 }}
+        className="py-24 px-6 relative z-10"
+      >
         <div className="max-w-5xl mx-auto glass border-[#5b6af5]/20 bg-[#5b6af5]/5 p-20 rounded-[3rem] text-center space-y-8 overflow-hidden relative group">
           <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse,rgba(91,106,245,0.2)_0%,transparent_70%)] pointer-events-none" />
 
@@ -258,7 +283,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* FOOTER */}
       <footer className="relative z-10 border-t border-white/5 py-12 px-10 flex flex-col md:flex-row justify-center items-center gap-8">
