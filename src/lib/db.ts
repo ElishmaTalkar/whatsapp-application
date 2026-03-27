@@ -161,6 +161,7 @@ export const db = {
     },
     users: {
         create: async (data: { email: string; passwordHash: string; name?: string }) => {
+            if (!supabase) throw new Error("Supabase is not initialized. Ensure NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY are set.");
             const { data: user, error } = await supabase
                 .from('users')
                 .insert([{
@@ -175,6 +176,7 @@ export const db = {
             return user.id;
         },
         findByEmail: async (email: string) => {
+            if (!supabase) throw new Error("Supabase is not initialized. Ensure NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY are set.");
             const { data, error } = await supabase
                 .from('users')
                 .select('*')
