@@ -112,31 +112,7 @@ export default function Home() {
       </section>
 
 
-      {/* LOGOS BAR */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative z-10 border-t border-white/5 py-10 px-6 flex flex-wrap justify-center gap-14 group"
-      >
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#080c10] px-4 font-mono text-[10px] uppercase tracking-[0.12em] text-[#f2f4ff]/30">
-          Trusted integrations
-        </div>
-        {[
-          { name: 'WhatsApp', sub: 'Business' },
-          { name: 'Instagram', sub: 'API' },
-          { name: 'Google', sub: 'Gemini' },
-          { name: 'Groq', sub: 'Llama 3' },
-          { name: 'Supabase', sub: '' },
-          { name: 'Next', sub: '.js' },
-          { name: 'Meta', sub: 'Graph API' }
-        ].map((logo, i) => (
-          <span key={i} className="text-sm font-bold text-white/20 hover:text-white/60 transition-colors uppercase tracking-widest cursor-default">
-            {logo.name} <span className="font-normal opacity-60 lowercase">{logo.sub}</span>
-          </span>
-        ))}
-      </motion.div>
+
 
       {/* FEATURES */}
       <motion.section
